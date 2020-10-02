@@ -1,19 +1,22 @@
-# # This is a basic workflow to help you get started with Actions
-#
-# name: CI
-#
-# on: [push]
-#
-# jobs:
-#   action:
-#     runs-on: ubuntu-latest
-#
-#     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v1
-#
-#       - name: hello-action
-#         uses: ./.github/actions/hello-world
-#         with:
-#           firstGreeting : "Learning Lab User"
-#           thirdGreeting : "Coconut"
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on: [push]
+
+jobs:
+  action:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v1
+
+      - name: hello-action
+        uses: ./.github/actions/hello-world
+        with:
+          firstGreeting : "Learning Lab User"
+          thirdGreeting : "Coconut"
+
+      - name: meow
+        uses: ./.github/actions/cat-facts
