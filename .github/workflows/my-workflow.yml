@@ -17,3 +17,6 @@ jobs:
         with:
           firstGreeting : "Learning Lab User"
           thirdGreeting : "Coconut"
+
+      - name: meow
+        uses: ./.github/actions/cat-facts
